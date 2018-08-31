@@ -30,7 +30,7 @@
 
 // If using software serial, keep this line enabled
 // (you can change the pin numbers to match your wiring):
-SoftwareSerial mySerial(3, 2);
+SoftwareSerial mySerial(13, 12); //originaly 3,2
 
 // If using hardware serial (e.g. Arduino Mega), comment out the
 // above SoftwareSerial line, and enable this line instead
@@ -80,7 +80,7 @@ void setup()
   // the nice thing about this code is you can have a timer0 interrupt go off
   // every 1 millisecond, and read data from the GPS for you. that makes the
   // loop code a heck of a lot easier!
-  useInterrupt(true);
+  useInterrupt(false); //originaly was true
 
   delay(1000);
   // Ask for firmware version
